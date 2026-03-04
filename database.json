@@ -1,1 +1,8 @@
-
+{
+  "routes": {},
+  "weeklyRoutes": {},
+  "routeSettings": {
+    "channelId": null,
+    "roleId": null
+  }
+}
