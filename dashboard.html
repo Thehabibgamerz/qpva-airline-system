@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>QPVA Dashboard</title>
+</head>
+<body>
 
+<h2>Weekly Routes</h2>
+
+<select id="day">
+<option>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+<option>Saturday</option>
+<option>Sunday</option>
+</select>
+
+<input id="multiplier" placeholder="2x">
+<textarea id="routes" placeholder="Routes"></textarea>
+<button onclick="save()">Save</button>
+
+<script>
+async function save() {
+  await fetch("/api/routes", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      day: document.getElementById("day").value,
+      multiplier: document.getElementById("multiplier").value,
+      routes: document.getElementById("routes").value
+    })
+  });
+  alert("Saved!");
+}
+</script>
+
+</body>
+</html>
