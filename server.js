@@ -16,7 +16,7 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const GUILD_ID = process.env.GUILD_ID;
 
-const REDIRECT_URI = "https://discord-bot-production-971f.up.railway.app/auth/callback";
+const REDIRECT_URI = "https://qpva-airline-system-production.up.railway.app/auth/callback";
 
 // LOGIN ROUTE
 app.get("/login", (req, res) => {
