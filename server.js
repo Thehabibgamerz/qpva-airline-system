@@ -6,12 +6,17 @@ const app = express();
 
 app.use(express.json());
 
+app.set("trust proxy", 1); // REQUIRED for Railway
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: true }
+    cookie: {
+      secure: false,   // IMPORTANT FIX
+      httpOnly: true
+    }
   })
 );
 
