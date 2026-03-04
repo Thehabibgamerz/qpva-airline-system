@@ -1,8 +1,10 @@
 {
-  "routes": {},
-  "weeklyRoutes": {},
-  "routeSettings": {
-    "channelId": null,
-    "roleId": null
+  "routeChannelId": "",
+  "mentionRole": "",
+  "weeklyRoutes": {
+    "Monday": {
+      "multiplier": "2",
+      "routes": ["✈️ AK101 | DEL → BOM"]
+    }
   }
 }
